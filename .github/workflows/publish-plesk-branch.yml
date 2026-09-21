@@ -21,9 +21,23 @@ jobs:
         with:
           node-version: 20
       - name: Install dependencies
+        run: npm ci
+      - name: Audit dependencies
+        run: npm audit --omit=dev
+      - name: Build and verify static export
         run: |
-          if [ -f package-lock.json ]; then npm ci; else npm install; fi
-      - run: npm run audit
+          npm run audit
+          npm run verify:static
+      - name: Inject deployment metadata
+        run: |
+          cat <<EOF > out/deploy.json
+          {
+            "sourceSha": "${GITHUB_SHA}",
+            "builtAt": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+            "deployment": "static-export",
+            "service": "campaign-photo-studio"
+          }
+          EOF
       - name: Publish generated static files to plesk branch
         env:
           GH_TOKEN: ${{ github.token }}
@@ -32,6 +46,15 @@ jobs:
           tmp="$(mktemp -d)"
           cp -a out/. "$tmp/"
           cd "$tmp"
+
+          # Verify forbidden artifacts do not exist in deployment tree
+          for forbidden in package.json package-lock.json README.md AGENTS.md src docs prompts .env .git; do
+            if [ -e "$forbidden" ]; then
+              echo "Error: forbidden file/folder '$forbidden' found in deployment artifact!" >&2
+              exit 1
+            fi
+          done
+
           git init
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
