@@ -11,7 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "verify:static": "node scripts/verify-static.mjs",
-    "audit": "npm run typecheck && npm run lint && npm test && npm run build && npm run verify:static"
+    "verify:assets": "node scripts/verify-assets.mjs",
+    "audit": "npm run typecheck && npm run lint && npm test && npm run build && npm run verify:static && npm run verify:assets"
   },
   "engines": {
     "node": ">=20.12.0"

@@ -17,6 +17,8 @@ export interface TemplateDefinition {
   identity: IdentityId;
   format: FormatId;
   label: string;
+  thumbnail?: string;
+  status?: "official-source" | "human-supplied" | "derived";
   width: number;
   height: number;
   photoArea: NormalizedRect;
@@ -27,3 +29,4 @@ export interface TemplateDefinition {
     quality?: number;
   };
 }
+
