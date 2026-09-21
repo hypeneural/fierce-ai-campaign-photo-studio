@@ -21,6 +21,8 @@ export const templateDefinitionSchema = z.object({
   identity: z.enum(["paulinha", "emerson-stein", "paulinha-emerson"]),
   format: z.enum(["avatar", "story", "feed"]),
   label: z.string().min(1),
+  thumbnail: z.string().min(1).optional(),
+  status: z.enum(["official-source", "human-supplied", "derived"]).optional(),
   width: z.number().int().positive(),
   height: z.number().int().positive(),
   photoArea: normalizedRectSchema,

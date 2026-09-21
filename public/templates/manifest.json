@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T00:45:00Z",
+  "assets": [
+    {
+      "id": "paulinha-avatar-official-v1",
+      "identity": "paulinha",
+      "format": "avatar",
+      "label": "Paulinha · Avatar Redondo (Oficial)",
+      "path": "/templates/paulinha/avatar-official-v1.png",
+      "thumbnail": "/templates/thumbnails/paulinha-avatar-official-v1.png",
+      "thumbnailSha256": "abab01f3d8beb429aadf8da6a48229b52d04e346983174e653c8b074e52606e6",
+      "status": "official-source",
+      "source": "https://filtropaulinha.dualcomunicacao.com.br/ (circulo.png embedded WebP)",
+      "sourceSha256": "2c041181bd36daa8a9ac6258ac99b9327f42db198456659c0951c39663a871be",
+      "sha256": "af943532db9e814720783140e1b963e6c9fcfb5123a6efb8dde05b99f140ebd6",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "round",
+      "photoArea": {
+        "x": 0.05,
+        "y": 0.05,
+        "width": 0.9,
+        "height": 0.6
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "paulinha-avatar-quadrado-official-v1",
+      "identity": "paulinha",
+      "format": "avatar",
+      "label": "Paulinha · Feed / Quadrado (Oficial)",
+      "path": "/templates/paulinha/avatar-quadrado-official-v1.png",
+      "thumbnail": "/templates/thumbnails/paulinha-avatar-quadrado-official-v1.png",
+      "thumbnailSha256": "333f3c8cc634dbdc99281819ddc3249f2f1579dc832a52fccb7c1a04274b4d52",
+      "status": "official-source",
+      "source": "https://filtropaulinha.dualcomunicacao.com.br/ (quadrado.png embedded WebP)",
+      "sourceSha256": "f902d1d8b2351815278868be17547fd2de1b6116fd5f87cda60024d8765ebb6e",
+      "sha256": "5d9496ddefea2e64c2b4dc26235fab4fc1b0d92345b30d4bb9646bb9a04c91d2",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        353,
+        1080,
+        1080
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 0.75
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "paulinha-story-derived-v1",
+      "identity": "paulinha",
+      "format": "story",
+      "label": "Paulinha · Story 9:16",
+      "path": "/templates/paulinha/story-derived-v1.png",
+      "thumbnail": "/templates/thumbnails/paulinha-story-derived-v1.png",
+      "thumbnailSha256": "5314d9d51ba3be83154a3befbae6cce56f66cf49e526a1e842fbef7e6ecdabfa",
+      "status": "derived",
+      "source": "Derived from Paulinha official concept motif & official footer",
+      "sourceSha256": "8e8fb09e6fb3533d76ebcfef7cf8a79a2cb84ae54daeaf449bd412f8b4e45b54",
+      "sha256": "c994c1037b5030911f8b26a4ebc32151e417bbe6ca43af30b998b14a2ec164af",
+      "width": 1080,
+      "height": 1920,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        80,
+        1080,
+        1920
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0.05,
+        "y": 0.09,
+        "width": 0.9,
+        "height": 0.7
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "emerson-avatar-official-v1",
+      "identity": "emerson-stein",
+      "format": "avatar",
+      "label": "Emerson Stein · Onda Azul (Oficial)",
+      "path": "/templates/emerson-stein/avatar-official-v1.png",
+      "thumbnail": "/templates/thumbnails/emerson-avatar-official-v1.png",
+      "thumbnailSha256": "c2e67f7074e8c1849854679ff8f547c60afc854605ae76776f18922324155378",
+      "status": "human-supplied",
+      "source": "IMG_7743.PNG (4500x4500 master transparent PNG)",
+      "sourceSha256": "0f2d205f5cb94c40e781b30795de95342858c4f389e6e1fe55e64155fc23b1e3",
+      "sha256": "bdd3b9bccfe81ad5ce2365403baa7dd0d6a08ddc52f2b5a59148a1cf826f45ce",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        591,
+        1080,
+        1080
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 0.7
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "emerson-avatar-circulo-official-v1",
+      "identity": "emerson-stein",
+      "format": "avatar",
+      "label": "Emerson Stein · Circular Oficial",
+      "path": "/templates/emerson-stein/avatar-circulo-official-v1.png",
+      "thumbnail": "/templates/thumbnails/emerson-avatar-circulo-official-v1.png",
+      "thumbnailSha256": "4d649419ad362d30af210059e01d5d2ee31cb1e5e0995d79b6d852ed1e5ddd51",
+      "status": "official-source",
+      "source": "https://pic-filter-studio.lovable.app/ (__l5e/assets-v1/.../filtro-1.png)",
+      "sourceSha256": "95bd1e0f6e4114cf3689616ffacadec957e5c5fa2fc8e360f951cd94edf12be4",
+      "sha256": "87488294c0a8a95757b745d1325efedb27012480f1b91fe83f655fb559a1e359",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        27,
+        212,
+        1078,
+        1080
+      ],
+      "cropShape": "round",
+      "photoArea": {
+        "x": 0.05,
+        "y": 0.05,
+        "width": 0.9,
+        "height": 0.65
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "emerson-story-derived-v1",
+      "identity": "emerson-stein",
+      "format": "story",
+      "label": "Emerson Stein · Story 9:16",
+      "path": "/templates/emerson-stein/story-derived-v1.png",
+      "thumbnail": "/templates/thumbnails/emerson-story-derived-v1.png",
+      "thumbnailSha256": "ad8f9fb9aa15261b15b2ce25bf2874f9ae7762828f41d1945897b6c2ef1c4569",
+      "status": "derived",
+      "source": "Derived from Emerson IMG_7743.PNG official wave & branding",
+      "sourceSha256": "0f2d205f5cb94c40e781b30795de95342858c4f389e6e1fe55e64155fc23b1e3",
+      "sha256": "a77768cb213213a20ee0fbd742365a19a41c8fd0515cdb55ea29d6e3e61c646e",
+      "width": 1080,
+      "height": 1920,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        60,
+        1080,
+        1920
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0.05,
+        "y": 0.06,
+        "width": 0.9,
+        "height": 0.68
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-avatar-derived-v1",
+      "identity": "paulinha-emerson",
+      "format": "avatar",
+      "label": "Paulinha + Emerson · Avatar Conjunto",
+      "path": "/templates/paulinha-emerson/avatar-derived-v1.png",
+      "thumbnail": "/templates/thumbnails/duo-avatar-derived-v1.png",
+      "thumbnailSha256": "32fcc4f6cb60ef91aed10476aaa3cd728632e4c734dd4a58c8f2aa0ebfffefdb",
+      "status": "derived",
+      "source": "Derived from Paulinha official footer & Emerson official wave",
+      "sourceSha256": "combined(f902d1d8..., 0f2d205f...)",
+      "sha256": "c724eb8b29a91f56f0027cd6709db1b9280277fee85d0ed842214930233c463a",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        840,
+        1080,
+        1080
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 0.76
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-story-derived-v1",
+      "identity": "paulinha-emerson",
+      "format": "story",
+      "label": "Paulinha + Emerson · Story Conjunto 9:16",
+      "path": "/templates/paulinha-emerson/story-derived-v1.png",
+      "thumbnail": "/templates/thumbnails/duo-story-derived-v1.png",
+      "thumbnailSha256": "f8cd0879486ec124630643a98b67b235e32358d0755d9207806a32bf7ab0ead1",
+      "status": "derived",
+      "source": "Derived from Paulinha & Emerson approved visual elements",
+      "sourceSha256": "combined(f902d1d8..., 0f2d205f...)",
+      "sha256": "894adbb07bdf6e6616b2e6539d5fcbd053147ac614331619ec2a82aed7996869",
+      "width": 1080,
+      "height": 1920,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        60,
+        1080,
+        1920
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0.05,
+        "y": 0.06,
+        "width": 0.9,
+        "height": 0.72
+      },
+      "retrievedAt": "2026-09-21"
+    }
+  ]
+}
