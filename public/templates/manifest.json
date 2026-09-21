@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T00:45:00Z",
+  "generatedAt": "2026-09-21T04:32:23.102Z",
   "assets": [
     {
       "id": "paulinha-avatar-official-v1",
@@ -55,9 +55,9 @@
       ],
       "cropShape": "rect",
       "photoArea": {
-        "x": 0.0,
-        "y": 0.0,
-        "width": 1.0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
         "height": 0.75
       },
       "retrievedAt": "2026-09-21"
@@ -115,9 +115,9 @@
       ],
       "cropShape": "rect",
       "photoArea": {
-        "x": 0.0,
-        "y": 0.0,
-        "width": 1.0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
         "height": 0.7
       },
       "retrievedAt": "2026-09-21"
@@ -205,9 +205,9 @@
       ],
       "cropShape": "rect",
       "photoArea": {
-        "x": 0.0,
-        "y": 0.0,
-        "width": 1.0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
         "height": 0.76
       },
       "retrievedAt": "2026-09-21"
@@ -239,6 +239,336 @@
         "y": 0.06,
         "width": 0.9,
         "height": 0.72
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-avatar-01",
+      "identity": "paulinha-emerson",
+      "format": "avatar",
+      "label": "Paulinha + Emerson · Clássica Circular",
+      "path": "/templates/paulinha-emerson/duo-avatar-01.png",
+      "thumbnail": "/templates/thumbnails/duo-avatar-01.png",
+      "thumbnailSha256": "cd76ffed8db2dda6dfa53793e34ad7c856049048cc67ab9f46d9ab04094ccdea",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ (1)",
+      "sourceSha256": "313329ea9e0477566935f871d9631695a2d3f10aaa6da7c1728b823142c70c2e",
+      "sha256": "313329ea9e0477566935f871d9631695a2d3f10aaa6da7c1728b823142c70c2e",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "round",
+      "photoArea": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-avatar-02",
+      "identity": "paulinha-emerson",
+      "format": "avatar",
+      "label": "Paulinha + Emerson · Faixa Superior & Inferior",
+      "path": "/templates/paulinha-emerson/duo-avatar-02.png",
+      "thumbnail": "/templates/thumbnails/duo-avatar-02.png",
+      "thumbnailSha256": "7802baae325f4c451fb3a1a6aa4e0d752a5ed74111b3c3361060f7cd7ec67f5b",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ (2)",
+      "sourceSha256": "4e7f1f9f9f3ddcc9a6953d8c02ead36d3539d12e87892a22bebb79fe95075e55",
+      "sha256": "4e7f1f9f9f3ddcc9a6953d8c02ead36d3539d12e87892a22bebb79fe95075e55",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0.13,
+        "y": 0.07,
+        "width": 0.73,
+        "height": 0.65
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-avatar-03",
+      "identity": "paulinha-emerson",
+      "format": "avatar",
+      "label": "Paulinha + Emerson · Selo Circular EU APOIO",
+      "path": "/templates/paulinha-emerson/duo-avatar-03.png",
+      "thumbnail": "/templates/thumbnails/duo-avatar-03.png",
+      "thumbnailSha256": "70e5ebfcda94b02ae14c4080f9f0c6e711d01543ccd01c235d22139606c8efd2",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ (3)",
+      "sourceSha256": "898e2f8078ab52ce40bac54a3bb6908ac8284f48896eb87e04efa7e931cf0976",
+      "sha256": "898e2f8078ab52ce40bac54a3bb6908ac8284f48896eb87e04efa7e931cf0976",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "round",
+      "photoArea": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-avatar-04",
+      "identity": "paulinha-emerson",
+      "format": "avatar",
+      "label": "Paulinha + Emerson · Octogonal Dinâmica",
+      "path": "/templates/paulinha-emerson/duo-avatar-04.png",
+      "thumbnail": "/templates/thumbnails/duo-avatar-04.png",
+      "thumbnailSha256": "587795322f4444a14ad2ea00d7683c6ebb3184e814bfefdef2dfbbe9a228ffc2",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ (4)",
+      "sourceSha256": "b463e59fd3d0aedc52bcbea3dae029d60d87adf16ae8cd27cd6d45dd10be18e9",
+      "sha256": "b463e59fd3d0aedc52bcbea3dae029d60d87adf16ae8cd27cd6d45dd10be18e9",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0.14,
+        "y": 0.1,
+        "width": 0.72,
+        "height": 0.7
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-avatar-05",
+      "identity": "paulinha-emerson",
+      "format": "avatar",
+      "label": "Paulinha + Emerson · União Apertando as Mãos",
+      "path": "/templates/paulinha-emerson/duo-avatar-05.png",
+      "thumbnail": "/templates/thumbnails/duo-avatar-05.png",
+      "thumbnailSha256": "a7e8a3b3c1bf54859baaf3dc1ad9c85a803e050c2f88ed8be8a17cf2cac6845e",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ (5)",
+      "sourceSha256": "176896d4f4c8660f39d9a28514ac4e9295ba1822a1e565504a947964ae419ecb",
+      "sha256": "176896d4f4c8660f39d9a28514ac4e9295ba1822a1e565504a947964ae419ecb",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "round",
+      "photoArea": {
+        "x": 0.12,
+        "y": 0.02,
+        "width": 0.76,
+        "height": 0.68
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-avatar-06",
+      "identity": "paulinha-emerson",
+      "format": "avatar",
+      "label": "Paulinha + Emerson · Ondas Dinâmicas",
+      "path": "/templates/paulinha-emerson/duo-avatar-06.png",
+      "thumbnail": "/templates/thumbnails/duo-avatar-06.png",
+      "thumbnailSha256": "1cdfbbd4ab42908ecbca62c32d114109bacd7f6dd2e00af90d9dc289db94a0fa",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ (6)",
+      "sourceSha256": "727367e5bdbb25032aac34e5aab80b70b6459241ab56084c9bb1d29b0780670f",
+      "sha256": "727367e5bdbb25032aac34e5aab80b70b6459241ab56084c9bb1d29b0780670f",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0.16,
+        "y": 0.19,
+        "width": 0.68,
+        "height": 0.64
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-avatar-07",
+      "identity": "paulinha-emerson",
+      "format": "avatar",
+      "label": "Paulinha + Emerson · Apoio Paulinha 2020",
+      "path": "/templates/paulinha-emerson/duo-avatar-07.png",
+      "thumbnail": "/templates/thumbnails/duo-avatar-07.png",
+      "thumbnailSha256": "50a0deb1e8fce60c99cbe1ed06e929255418a80c6d2cdafdde35118978e899e2",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ (7)",
+      "sourceSha256": "305a73af09b5b158ba93ceceddccee3fe5b9378fde78e8f9648c5dbf35a1b1bf",
+      "sha256": "305a73af09b5b158ba93ceceddccee3fe5b9378fde78e8f9648c5dbf35a1b1bf",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0.06,
+        "y": 0.02,
+        "width": 0.85,
+        "height": 0.72
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-avatar-08",
+      "identity": "paulinha-emerson",
+      "format": "avatar",
+      "label": "Paulinha + Emerson · Apoio Emerson Stein 15100",
+      "path": "/templates/paulinha-emerson/duo-avatar-08.png",
+      "thumbnail": "/templates/thumbnails/duo-avatar-08.png",
+      "thumbnailSha256": "fe541210d0ac4c7eccbca4e15dc68a8c6ab9e86c9156e10f78ffd13ce982afdc",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ (8)",
+      "sourceSha256": "369a5b7daca88f7b208c9a40ab6e560915a8f777f24b930982aaf153922d7f65",
+      "sha256": "369a5b7daca88f7b208c9a40ab6e560915a8f777f24b930982aaf153922d7f65",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.75
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "duo-avatar-09",
+      "identity": "paulinha-emerson",
+      "format": "avatar",
+      "label": "Paulinha + Emerson · Ondas com Selo Superior",
+      "path": "/templates/paulinha-emerson/duo-avatar-09.png",
+      "thumbnail": "/templates/thumbnails/duo-avatar-09.png",
+      "thumbnailSha256": "bfc4b0d839c5d1f198599c5716ad9d6856f964c706a657b4347ca4147c116675",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ (9)",
+      "sourceSha256": "fea53541cb965ea9d61eac92d6a2c96a7d0d6de6c6457348640de75f1821ed9f",
+      "sha256": "fea53541cb965ea9d61eac92d6a2c96a7d0d6de6c6457348640de75f1821ed9f",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "round",
+      "photoArea": {
+        "x": 0.1,
+        "y": 0.16,
+        "width": 0.79,
+        "height": 0.68
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "paulinha-avatar-apoio-v1",
+      "identity": "paulinha",
+      "format": "avatar",
+      "label": "Paulinha · EU APOIO 2020",
+      "path": "/templates/paulinha/avatar-apoio-v1.png",
+      "thumbnail": "/templates/thumbnails/paulinha-avatar-apoio-v1.png",
+      "thumbnailSha256": "50a0deb1e8fce60c99cbe1ed06e929255418a80c6d2cdafdde35118978e899e2",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ChatGPT Image 21 de set. de 2026, 01_01_49 (1).png",
+      "sourceSha256": "305a73af09b5b158ba93ceceddccee3fe5b9378fde78e8f9648c5dbf35a1b1bf",
+      "sha256": "305a73af09b5b158ba93ceceddccee3fe5b9378fde78e8f9648c5dbf35a1b1bf",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "round",
+      "photoArea": {
+        "x": 0.06,
+        "y": 0.02,
+        "width": 0.85,
+        "height": 0.72
+      },
+      "retrievedAt": "2026-09-21"
+    },
+    {
+      "id": "emerson-avatar-apoio-v1",
+      "identity": "emerson-stein",
+      "format": "avatar",
+      "label": "Emerson · EU APOIO 15100",
+      "path": "/templates/emerson-stein/avatar-apoio-v1.png",
+      "thumbnail": "/templates/thumbnails/emerson-avatar-apoio-v1.png",
+      "thumbnailSha256": "fe541210d0ac4c7eccbca4e15dc68a8c6ab9e86c9156e10f78ffd13ce982afdc",
+      "status": "human-supplied-derived",
+      "source": "Molduras/ChatGPT Image 21 de set. de 2026, 01_01_49 (2).png",
+      "sourceSha256": "369a5b7daca88f7b208c9a40ab6e560915a8f777f24b930982aaf153922d7f65",
+      "sha256": "369a5b7daca88f7b208c9a40ab6e560915a8f777f24b930982aaf153922d7f65",
+      "width": 1080,
+      "height": 1080,
+      "hasAlpha": true,
+      "alphaBoundingBox": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "cropShape": "rect",
+      "photoArea": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.75
       },
       "retrievedAt": "2026-09-21"
     }

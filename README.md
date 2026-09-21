@@ -56,17 +56,34 @@ If this folder was delivered outside GitHub, authenticate GitHub CLI and run:
 
 The script creates a private `campaign-photo-studio` repository from this local Git history and pushes `main`.
 
-## FIERCE AI
+## Gestão de Molduras e Templates
+
+Para adicionar novas molduras da campanha, siga as diretrizes em [`docs/templates/ADDING-FRAMES.md`](docs/templates/ADDING-FRAMES.md):
+- **Onde adicionar**: `public/templates/paulinha/`, `public/templates/emerson-stein/`, `public/templates/paulinha-emerson/`
+- **Requisitos**: PNG-24 RGBA com transparência real no centro, resolução recomendada 1080×1080 (Avatar) ou 1080×1920 (Story).
+- **Thumbnails**: 360×360 px em `public/templates/thumbnails/`.
+- **Registro**: Catalogar no manifesto de proveniência `public/templates/manifest.json` e registrar em `src/templates/registry.ts`.
+- **Validação**: `npm run verify:assets` e `npm run audit`.
+
+## FIERCE AI & Deploy Plesk
 
 This repository uses the FIERCE AI collaboration protocol for human/agent engineering work. See `docs/FIERCE-AI.md` and the issue forms under `.github/ISSUE_TEMPLATE/`.
 
-For the current hosting target, the app is built with `output: "export"`. Production receives the generated static artifact; Plesk does not run the Next.js application server.
+Para o ambiente de produção em `apoio.etijucas.com.br`, a aplicação é gerada com `output: "export"`.
+O Plesk serve **exclusivamente** os arquivos estáticos compilados da branch de release `plesk` (que contém os arquivos de `out/`). O código-fonte (`src/`, `package.json`, etc.) **nunca** é publicado na raiz do servidor web.
 
 ```bash
 npm run audit
 ```
 
-The static result is generated in `out/` and checked by `npm run verify:static`.
+A suíte `npm run audit` executa:
+1. `npm run typecheck`
+2. `npm run lint`
+3. `npm test`
+4. `npm run build`
+5. `npm run verify:static`
+6. `npm run verify:assets`
 
 Operational guide: `docs/operations/PLESK.md`.
-Antigravity audit prompt: `prompts/ANTIGRAVITY-2.15.1-PLESK-AUDIT.md`.
+Guia de molduras: `docs/templates/ADDING-FRAMES.md`.
+

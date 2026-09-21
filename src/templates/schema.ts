@@ -22,7 +22,7 @@ export const templateDefinitionSchema = z.object({
   format: z.enum(["avatar", "story", "feed"]),
   label: z.string().min(1),
   thumbnail: z.string().min(1).optional(),
-  status: z.enum(["official-source", "human-supplied", "derived"]).optional(),
+  status: z.enum(["official-source", "human-supplied", "derived", "human-supplied-derived"]).optional(),
   width: z.number().int().positive(),
   height: z.number().int().positive(),
   photoArea: normalizedRectSchema,
