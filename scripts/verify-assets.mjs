@@ -1,10 +1,10 @@
 import { readFile, access } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
-import { templates } from "../src/templates/registry.ts";
 
 const root = path.resolve(".");
 const manifestPath = path.join(root, "public", "templates", "manifest.json");
+const registryPath = path.join(root, "src", "templates", "registry.ts");
 
 async function fileExists(filePath) {
   try {
@@ -62,12 +62,16 @@ for (const asset of manifest.assets) {
   }
 }
 
-console.log(`Verifying ${templates.length} registry templates against disk...`);
-for (const tpl of templates) {
-  for (const layer of tpl.layers) {
-    const layerPath = path.join(root, "public", layer.src.replace(/^\//, ""));
+// Verify templates in registry.ts without requiring .ts runtime transpiler in Node 20
+if (await fileExists(registryPath)) {
+  const registryContent = await readFile(registryPath, "utf-8");
+  const layerMatches = [...registryContent.matchAll(/src:\s*["']([^"']+)["']/g)];
+  console.log(`Verifying ${layerMatches.length} registry layer references against disk...`);
+  for (const match of layerMatches) {
+    const layerSrc = match[1];
+    const layerPath = path.join(root, "public", layerSrc.replace(/^\//, ""));
     if (!(await fileExists(layerPath))) {
-      throw new Error(`Registry layer missing on disk: ${layerPath} (template: ${tpl.id})`);
+      throw new Error(`Registry layer missing on disk: ${layerPath}`);
     }
   }
 }
