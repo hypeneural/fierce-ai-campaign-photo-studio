@@ -18,4 +18,17 @@ describe("template registry", () => {
       expect(y + height).toBeLessThanOrEqual(1);
     }
   });
+
+  it("enforces exact target dimensions: avatar is 1080x1080 and story is 1080x1920", () => {
+    for (const template of templates) {
+      if (template.format === "avatar") {
+        expect(template.width).toBe(1080);
+        expect(template.height).toBe(1080);
+      } else if (template.format === "story") {
+        expect(template.width).toBe(1080);
+        expect(template.height).toBe(1920);
+      }
+    }
+  });
 });
+
