@@ -7,7 +7,7 @@ import { aspectForRect } from "@/image-engine/geometry";
 import { validatePhotoFile } from "@/image-engine/input";
 import { renderTemplateToCanvas } from "@/image-engine/render";
 import { getTemplates } from "@/templates/registry";
-import type { FormatId, IdentityId, TemplateDefinition } from "@/templates/types";
+import type { FormatId, IdentityId } from "@/templates/types";
 import styles from "./studio.module.css";
 
 const identities: Array<{ id: IdentityId; label: string }> = [
@@ -21,11 +21,20 @@ const formats: Array<{ id: FormatId; label: string }> = [
   { id: "story", label: "Story 9:16" },
 ];
 
+type StudioSelection = {
+  identity: IdentityId;
+  format: FormatId;
+  templateId: string;
+};
+
+const INITIAL_SELECTION: StudioSelection = {
+  identity: "paulinha",
+  format: "avatar",
+  templateId: "paulinha-avatar-placeholder-v1",
+};
+
 export default function StudioClient() {
-  const [identity, setIdentity] = useState<IdentityId>("paulinha");
-  const [format, setFormat] = useState<FormatId>("avatar");
-  const availableTemplates = useMemo(() => getTemplates(identity, format), [identity, format]);
-  const [templateId, setTemplateId] = useState(availableTemplates[0]?.id ?? "");
+  const [selection, setSelection] = useState<StudioSelection>(INITIAL_SELECTION);
   const [photoUrl, setPhotoUrl] = useState<string | null>(null);
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
@@ -33,22 +42,52 @@ export default function StudioClient() {
   const [error, setError] = useState<string | null>(null);
   const [exporting, setExporting] = useState(false);
 
-  useEffect(() => {
-    setTemplateId(availableTemplates[0]?.id ?? "");
-  }, [availableTemplates]);
-
-  useEffect(() => {
-    setCrop({ x: 0, y: 0 });
-    setZoom(1);
-    setCropPixels(null);
-  }, [templateId]);
-
   useEffect(() => () => {
     if (photoUrl) URL.revokeObjectURL(photoUrl);
   }, [photoUrl]);
 
-  const template: TemplateDefinition | undefined = availableTemplates.find((item) => item.id === templateId) ?? availableTemplates[0];
+  const availableTemplates = useMemo(
+    () => getTemplates(selection.identity, selection.format),
+    [selection.identity, selection.format],
+  );
+
+  const template = useMemo(
+    () => availableTemplates.find((item) => item.id === selection.templateId) ?? availableTemplates[0],
+    [availableTemplates, selection.templateId],
+  );
+
   const aspect = template ? aspectForRect(template.photoArea, template.width, template.height) : 1;
+
+  function resetCropState() {
+    setCrop({ x: 0, y: 0 });
+    setZoom(1);
+    setCropPixels(null);
+  }
+
+  function handleIdentityChange(newIdentity: IdentityId) {
+    const nextTemplates = getTemplates(newIdentity, selection.format);
+    setSelection({
+      identity: newIdentity,
+      format: selection.format,
+      templateId: nextTemplates[0]?.id ?? "",
+    });
+    resetCropState();
+  }
+
+  function handleFormatChange(newFormat: FormatId) {
+    const nextTemplates = getTemplates(selection.identity, newFormat);
+    setSelection({
+      identity: selection.identity,
+      format: newFormat,
+      templateId: nextTemplates[0]?.id ?? "",
+    });
+    resetCropState();
+  }
+
+  function handleTemplateChange(newTemplateId: string) {
+    setSelection((prev) => ({ ...prev, templateId: newTemplateId }));
+    resetCropState();
+  }
 
   function onFile(file: File | undefined) {
     if (!file) return;
@@ -62,9 +101,7 @@ export default function StudioClient() {
       if (oldUrl) URL.revokeObjectURL(oldUrl);
       return URL.createObjectURL(file);
     });
-    setCrop({ x: 0, y: 0 });
-    setZoom(1);
-    setCropPixels(null);
+    resetCropState();
   }
 
   async function exportCurrent() {
@@ -96,7 +133,12 @@ export default function StudioClient() {
           <legend>1. Identidade</legend>
           <div className={styles.segmented}>
             {identities.map((item) => (
-              <button key={item.id} type="button" data-active={identity === item.id} onClick={() => setIdentity(item.id)}>
+              <button
+                key={item.id}
+                type="button"
+                data-active={selection.identity === item.id}
+                onClick={() => handleIdentityChange(item.id)}
+              >
                 {item.label}
               </button>
             ))}
@@ -107,7 +149,12 @@ export default function StudioClient() {
           <legend>2. Formato</legend>
           <div className={styles.segmented}>
             {formats.map((item) => (
-              <button key={item.id} type="button" data-active={format === item.id} onClick={() => setFormat(item.id)}>
+              <button
+                key={item.id}
+                type="button"
+                data-active={selection.format === item.id}
+                onClick={() => handleFormatChange(item.id)}
+              >
                 {item.label}
               </button>
             ))}
@@ -116,8 +163,12 @@ export default function StudioClient() {
 
         <label className={styles.label}>
           3. Template
-          <select value={templateId} onChange={(event) => setTemplateId(event.target.value)}>
-            {availableTemplates.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}
+          <select value={selection.templateId} onChange={(event) => handleTemplateChange(event.target.value)}>
+            {availableTemplates.map((item) => (
+              <option key={item.id} value={item.id}>
+                {item.label}
+              </option>
+            ))}
           </select>
         </label>
 
@@ -145,15 +196,16 @@ export default function StudioClient() {
           <strong>Prévia de enquadramento</strong>
           <span>{template?.width}×{template?.height}</span>
         </div>
-        <div className={styles.cropShell} style={{ aspectRatio }}>
+        <div className={styles.cropShell} style={{ aspectRatio: aspect }}>
           {photoUrl ? (
             <Cropper
+              key={template?.id}
               image={photoUrl}
               crop={crop}
               zoom={zoom}
               aspect={aspect}
               cropShape={template?.cropShape === "round" ? "round" : "rect"}
-              showGrid={format !== "avatar"}
+              showGrid={selection.format !== "avatar"}
               onCropChange={setCrop}
               onZoomChange={setZoom}
               onCropComplete={(_, pixels) => setCropPixels(pixels)}
