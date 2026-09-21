@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_NAME="${1:-campaign-photo-studio}"
+REPO_NAME="${1:-fierce-ai-campaign-photo-studio}"
 VISIBILITY="${VISIBILITY:-private}"
 
 if ! command -v gh >/dev/null 2>&1; then

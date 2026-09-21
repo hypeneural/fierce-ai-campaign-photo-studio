@@ -1,4 +1,4 @@
-# Campaign Photo Studio
+# FIERCE AI — Campaign Photo Studio
 
 Browser-first image compositor for campaign photo frames. The same engine supports multiple identities, output formats, and template variants without candidate-specific rendering code.
 
@@ -55,3 +55,18 @@ If this folder was delivered outside GitHub, authenticate GitHub CLI and run:
 ```
 
 The script creates a private `campaign-photo-studio` repository from this local Git history and pushes `main`.
+
+## FIERCE AI
+
+This repository uses the FIERCE AI collaboration protocol for human/agent engineering work. See `docs/FIERCE-AI.md` and the issue forms under `.github/ISSUE_TEMPLATE/`.
+
+For the current hosting target, the app is built with `output: "export"`. Production receives the generated static artifact; Plesk does not run the Next.js application server.
+
+```bash
+npm run audit
+```
+
+The static result is generated in `out/` and checked by `npm run verify:static`.
+
+Operational guide: `docs/operations/PLESK.md`.
+Antigravity audit prompt: `prompts/ANTIGRAVITY-2.15.1-PLESK-AUDIT.md`.

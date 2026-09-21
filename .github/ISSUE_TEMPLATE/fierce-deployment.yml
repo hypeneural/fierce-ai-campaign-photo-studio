@@ -1,0 +1,45 @@
+name: "FIERCE / Deployment"
+description: "Git, Plesk, DNS, TLS or production deployment validation"
+title: "[FIERCE][DEPLOY] "
+labels: []
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - GitHub
+        - Plesk Git
+        - DNS
+        - TLS/HTTPS
+        - Static artifact
+        - Web server/cache/compression
+        - Rollback
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current state
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Validation commands/actions
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Rollback plan
+    validations:
+      required: true

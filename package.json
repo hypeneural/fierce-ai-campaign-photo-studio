@@ -1,6 +1,6 @@
 {
   "name": "campaign-photo-studio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,16 +9,18 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "verify:static": "node scripts/verify-static.mjs",
+    "audit": "npm run typecheck && npm run lint && npm test && npm run build && npm run verify:static"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=20.12.0"
   },
   "dependencies": {
-    "next": "^16.0.0",
+    "next": "^16.3.3",
     "pica": "^10.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-easy-crop": "^6.2.0",
     "zod": "^4.0.0"
   },
@@ -27,8 +29,9 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.0.0",
-    "eslint-config-next": "^16.0.0",
+    "eslint-config-next": "^16.3.3",
     "typescript": "^5.9.0",
     "vitest": "^4.0.0"
-  }
+  },
+  "packageManager": "npm@10.8.2"
 }

@@ -1,0 +1,44 @@
+name: "FIERCE / Decision Request"
+description: "Request an architecture, security, deployment or performance decision"
+title: "[FIERCE][DECISION] "
+labels: []
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence already collected
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options considered
+      placeholder: "Option A...\nOption B..."
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints / invariants affected
+      description: Reference AGENTS.md, ADRs, privacy, Plesk or performance constraints.
+    validations:
+      required: true
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Agent recommendation (optional)
+  - type: dropdown
+    id: production
+    attributes:
+      label: Does this affect production deployment?
+      options:
+        - "No"
+        - "Yes — human approval required"
+    validations:
+      required: true

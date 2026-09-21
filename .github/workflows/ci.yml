@@ -13,9 +13,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm install
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
       - run: npm run typecheck
       - run: npm run lint
       - run: npm test
       - run: npm run build
+      - run: npm run verify:static
+      - name: Upload static artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: plesk-static-export
+          path: out/
+          if-no-files-found: error

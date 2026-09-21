@@ -69,3 +69,11 @@ Read the relevant local skill before changing that area:
 - `.agent/skills/template-authoring/SKILL.md`
 - `.agent/skills/privacy-security/SKILL.md`
 - `.agent/skills/qa/SKILL.md`
+- `.agent/skills/plesk-deployment/SKILL.md`
+- `.agent/skills/fierce-handoff/SKILL.md`
+
+## FIERCE AI collaboration
+
+Read `docs/FIERCE-AI.md` before server, deployment, security or performance work. GitHub issues are the durable handoff mechanism between ChatGPT, Antigravity and the human owner.
+
+For the current Plesk target, production is a static export. Do not introduce a Next.js runtime dependency on Plesk without a reviewed ADR.

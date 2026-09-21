@@ -1,0 +1,33 @@
+name: "FIERCE / Performance"
+description: "Performance measurement, regression or optimization proposal"
+title: "[FIERCE][PERF] "
+labels: []
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Device / browser / environment
+    validations:
+      required: true
+  - type: textarea
+    id: workload
+    attributes:
+      label: Workload
+      placeholder: "Example: 12 MP JPEG -> Story 1080x1920, 3 exports"
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Measurements
+      description: Include timings, memory observations and methodology.
+    validations:
+      required: true
+  - type: textarea
+    id: regression
+    attributes:
+      label: Baseline / regression comparison
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed optimization
