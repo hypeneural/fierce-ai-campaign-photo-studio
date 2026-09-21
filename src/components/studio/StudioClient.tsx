@@ -37,6 +37,12 @@ export default function StudioClient() {
     setTemplateId(availableTemplates[0]?.id ?? "");
   }, [availableTemplates]);
 
+  useEffect(() => {
+    setCrop({ x: 0, y: 0 });
+    setZoom(1);
+    setCropPixels(null);
+  }, [templateId]);
+
   useEffect(() => () => {
     if (photoUrl) URL.revokeObjectURL(photoUrl);
   }, [photoUrl]);
